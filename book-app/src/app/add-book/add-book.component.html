@@ -1,0 +1,47 @@
+
+<div class="container">
+
+    
+<div class="mb-3 row">
+    <label for="authorName" class="col-sm-2  col-form-label" >Book Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="bookName" name="bookinput" [(ngModel)]="book.bookName" >
+      <div class="error " id="bookerror" [hidden]="!nameError">Book Name is required</div>
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label for="authorName" class="col-sm-2 col-form-label">Author Name</label>
+    <div class="col-sm-10">
+      <input type="text" name="authorinput" class="form-control" id="authorNameee"  [(ngModel)]="book.authorName">
+      <div class="error"  id="authorError" [hidden]="!authorError">Author Name is required</div>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <label for="publishingYear" name="yearinput" class="col-sm-2 col-form-label">Publishing Year</label>
+    <div class="col-sm-10">
+      <input type="number"  class="form-control" id="publishingYear"  [(ngModel)]="book.publishingYear">
+      <div class="error" id="publishError" [hidden]="!nameError">Publishing Year is required</div>
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label for="language"  class="col-sm-2 col-form-label">Language</label>
+
+    <div class="col-sm-10">
+      <input type="text" name="langinput" class="form-control" id="language"  [(ngModel)]="book.language">
+    
+      <div class="error" id="languageError" [hidden]="!languageError">Language is required</div>
+    </div>
+
+    
+
+
+  </div>
+
+  <div class="container">
+    <div class="btn btn-primary" (click)="addHandler()" >Add Book</div>
+    <div class="btn btn-secondary" (click)="cancelHandler()" >Cancel</div>
+  </div>
+  
+
+</div>
